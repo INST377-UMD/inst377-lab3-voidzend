@@ -1,0 +1,121 @@
+/* Global page settings */
+html, body { margin: 0; }
+@font-face {
+   font-family: myFont;
+   src: url(sansation_bold.woff);
+   font-weight: bold;
+}
+
+body {
+  font-family: myFont; /* custom font-family */
+  text-align: center;                              /* center page text */
+  background: #f7f7ff;                             /* page background */
+  color: #222;
+}
+
+/* Header + Footer share the SAME styling via the same class */
+.bar {
+  background: gray;       /* different color than the rest of the page */
+  color: #fff;
+  padding: 16px;             /* padding required */
+  margin: 12px;              /* margin required */
+}
+.bar h1 { margin: 8px 0; }   /* Header must have an H1 */
+
+/* Nav: horizontal, no bullets, hover state */
+.menu {
+  list-style: none;          /* no bullets */
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;             /* lined up horizontally */
+  justify-content: center;
+  gap: 16px;
+}
+.menu a {
+  color: #e0eaff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.menu a:hover {
+  background: #2b4fb8;       /* hover state */
+}
+
+/* Content row: Main + Sidebar on ONE line */
+.content-row {
+  display: flex;             /* one line */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px;
+}
+
+/* Main content: percentage width + margin + padding */
+.main {
+  width: 65%;                /* percentage width */
+  background: #ffffff;
+  padding: 16px;             /* padding required */
+  margin: 6px;               /* margin required */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Sidebar: percentage width & different color & margin & padding & hover */
+.sidebar {
+  width: 30%;                /* percentage width */
+  background: #0375f7;       /* different color from the rest of the page */
+  padding: 16px;             /* padding required */
+  margin: 6px;               /* margin required */
+  border: 1px solid #c7ddff;
+  border-radius: 8px;
+  transition: background-color .2s ease-in-out;
+}
+.sidebar:hover {
+  background: #dcebff;       /* hover changes background color */
+}
+
+/* Form basics */
+form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;          /* label emphasis */
+}
+input[type="text"],
+select {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: width .2s ease;   /* focus animation */
+}
+input[type="text"]:focus {
+  width: 85%;                   /* expand on focus, shrink back on blur */
+  outline: none;
+  border-color: #6fa7ff;
+}
+button[type="submit"] {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  background: #1e3a8a;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background: #2b4fb8;
+}
+
+/* Small screens: keep them stacked (optional but tidy) */
+@media (max-width: 820px) {
+  .content-row { flex-direction: column; }
+  .main, .sidebar { width: 100%; }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rock • Paper • Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header (same class as Footer!!!) -->
+  <header class="bar">
+    <h1>Lab 3 - Rock Paper Scissors</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a></li>
+        <li><a href="https://gemini.google.com/?is_sa=1&is_sa=1&android-min-version=301356232&ios-min-version=322.0&campaign_id=bkws&utm_source=sem&utm_source=google&utm_medium=paid-media&utm_medium=cpc&utm_campaign=bkws&utm_campaign=2024enUS_gemfeb&pt=9008&mt=8&ct=p-growth-sem-bkws&gclsrc=aw.ds&gad_source=1&gad_campaignid=20108148196&gbraid=0AAAAApk5BhlA6PnkE9tg0ya8V_z58gAXG&gclid=Cj0KCQjwxL7GBhDXARIsAGOcmIPZIERPquTuVt82N7nZ1Lc3vnYeGUMapx3WsMwGAo7w6-Vo_TDUBmAaAh1jEALw_wcB" target="_blank">Gemini</a></li>
+        <li><a href="https://testudo.umd.edu/" target="_blank">Testudo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Body row: Main + Sidebar on one line -->
+  <section class="content-row">
+    <!-- Main Content (percentage width) -->
+    <main class="main">
+      <h2>Play Now</h2>
+      <form action="#" method="get">
+        <label for="playerName">Name (required):</label>
+        <input id="playerName" name="playerName" type="text" required>
+
+        <label for="choice">Choose One:</label>
+        <select id="choice" name="choice">
+          <option>Rock</option>
+          <option>Paper</option>
+          <option>Scissors</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <!-- Sidebar (percentage width, different color, hover effect) -->
+    <aside class="sidebar">
+      <h3>How to Play</h3>
+      <p>Rock beats Scissors</p>
+      <p>Paper beats Rock</p>
+      <p>Scissors beat Paper</p>
+      <p>Same choice = tie</p>
+    </aside>
+  </section>
+
+  <!-- Footer (same class as Header) -->
+  <footer class="bar">
+    <p>This is a footer maybe I should make it interesting but I am boring</p>
+  </footer>
+
+</body>
+</html>
